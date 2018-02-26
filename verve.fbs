@@ -1,0 +1,22 @@
+// Copyright 2017 Alexander Gallego
+//
+
+namespace verve.rpc;
+
+struct Extent {
+  offset: uint64;
+  length: uint64;
+}
+
+table Request {
+  reads: [Extent];
+  name: string;
+}
+
+table Response {
+  name: string;
+}
+
+rpc_service MemoryNode {
+  Prepare(Request):Response;
+}

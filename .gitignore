@@ -1,0 +1,14 @@
+.*.swp
+CMakeCache.txt
+CMakeDoxyfile.in
+CMakeDoxygenDefaults.cmake
+CMakeFiles
+CPackConfig.cmake
+CPackSourceConfig.cmake
+Makefile
+cmake_install.cmake
+compile_commands.json
+*.smf.fb.h
+*_generated.h
+verved
+verved_client_tester
