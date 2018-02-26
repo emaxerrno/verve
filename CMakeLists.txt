@@ -13,9 +13,13 @@ smf_generate_cpp(verve_fbs verve.fbs)
 
 include_directories(
   ${PROJECT_SOURCE_DIR}
+  ${PROJECT_BINARY_DIR}
   # hacks below
   ${PROJECT_SOURCE_DIR}/smf/src
-  ${PROJECT_SOURCE_DIR}/smf/src/third_party/flatbuffers/include)
+  ${PROJECT_SOURCE_DIR}/smf/src/third_party/flatbuffers/include
+  # hacks for out of tree builds
+  ${PROJECT_BINARY_DIR}/smf/src
+  ${PROJECT_BINARY_DIR}/smf/src/third_party/flatbuffers/include)
 
 add_executable(verved server.cc ${verve_fbs_OUTPUTS})
 target_link_libraries(verved smf_rpc)
