@@ -26,3 +26,10 @@ target_link_libraries(verved smf_rpc)
 
 add_executable(verved_client_tester client.cc ${verve_fbs_OUTPUTS})
 target_link_libraries(verved_client_tester smf_rpc)
+
+add_subdirectory(googletest)
+
+add_executable(verve_lock_manager_test
+  lock_manager_test.cc)
+target_link_libraries(verve_lock_manager_test
+  gtest_main)

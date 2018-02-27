@@ -1,3 +1,6 @@
 [submodule "smf"]
 	path = smf
 	url = https://github.com/noahdesu/smf.git
+[submodule "googletest"]
+	path = googletest
+	url = git://github.com/google/googletest.git
