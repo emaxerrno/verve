@@ -1,7 +1,7 @@
 #include <iostream>
 #include <core/app-template.hh>
 #include <core/sharded.hh>
-#include "rpc/rpc_server.h"
+#include <smf/rpc_server.h>
 #include "verve.smf.fb.h"
 
 namespace po = boost::program_options;
